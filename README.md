@@ -13,10 +13,14 @@ Este proyecto implementa un sistema de registro distribuido utilizando un métod
 ### Instalación de Dependencias Python
 Abre la línea de comandos (CMD) y ejecuta los siguientes comandos para instalar las bibliotecas necesarias:
 
- pip install flask
+pip install flask
+
 pip install flask-cors
+
 pip install mysqlclient
+
 pip install requests
+
 pip install loguru
 
 ## Arquitectura del Proyecto
