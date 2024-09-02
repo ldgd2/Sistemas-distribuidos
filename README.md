@@ -13,11 +13,11 @@ Este proyecto implementa un sistema de registro distribuido utilizando un métod
 ### Instalación de Dependencias Python
 Abre la línea de comandos (CMD) y ejecuta los siguientes comandos para instalar las bibliotecas necesarias:
 
-# pip install flask
-# pip install flask-cors
-# pip install mysqlclient
-# pip install requests
-# pip install loguru
+ pip install flask
+pip install flask-cors
+pip install mysqlclient
+pip install requests
+pip install loguru
 
 ## Arquitectura del Proyecto
 El proyecto está dividido en tres componentes principales:
@@ -57,15 +57,41 @@ Manejo de Tokens
 Los tokens son generados en el cliente utilizando los datos del formulario. Se asegura de que cada transacción de registro tenga un identificador único (token), lo cual evita la inserción de registros duplicados en la base de datos.
 
 ## Ejecución del Proyecto
-# Server: Debe ejecutarse en el servidor central donde se realizará la gestión de las solicitudes. Se ejecuta con:
+
+# Server 
+Debe ejecutarse en el servidor central donde se realizará la gestión de las solicitudes. Se ejecuta con:
 python server.py
 
-# Client: Se puede ejecutar en cualquier máquina de la red que desee realizar registros. Debe configurarse SERVER_HOST con la IP del servidor donde se ejecuta server.py. Se ejecuta con:
+# Client
+Se puede ejecutar en cualquier máquina de la red que desee realizar registros. Debe configurarse SERVER_HOST con la IP del servidor donde se ejecuta server.py. Se ejecuta con:
 
 python client.py
 
 
-# Base de Datos: Ejecuta MySQL/MariaDB mediante XAMPP. Asegúrate de que el servicio MySQL esté corriendo y que la base de datos person_db esté configurada con las tablas necesarias.
+# Base de Datos
+Ejecuta MySQL/MariaDB mediante XAMPP. Asegúrate de que el servicio MySQL esté corriendo y que la base de datos person_db esté configurada con las tablas necesarias.
 
 ## Creación de la Base de Datos
 Ejecuta las siguientes sentencias SQL para crear la base de datos y la tabla:
+
+CREATE DATABASE person_db;
+
+USE person_db;
+
+CREATE TABLE personas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL,
+    apellido_paterno VARCHAR(255) NOT NULL,
+    apellido_materno VARCHAR(255) NOT NULL,
+    numero_carnet VARCHAR(255) NOT NULL UNIQUE,
+    fecha_nacimiento DATE NOT NULL,
+    sexo CHAR(1) NOT NULL,
+    lugar_nacimiento VARCHAR(255) NOT NULL,
+    estado_civil CHAR(1) NOT NULL,
+    profesion VARCHAR(255) NOT NULL,
+    domicilio VARCHAR(255) NOT NULL,
+    token VARCHAR(255) NOT NULL,
+    creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
