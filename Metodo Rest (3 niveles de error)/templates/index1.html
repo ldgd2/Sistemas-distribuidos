@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Persona</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            padding-left: 350px;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .container.moved {
+            transform: translateX(-500px);
+        }
+
+        .left-side {
+            background: linear-gradient(135deg, #ff512f, #dd2476);
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            padding: 2rem;
+            border-radius: 20px;
+            transition: width 0.6s ease-in-out;
+            z-index: 1;
+        }
+
+        .left-side.expanded {
+            width: 60%;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .left-side h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .left-side p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .left-side button {
+            padding: 0.8rem 2rem;
+            background-color: white;
+            color: #ff512f;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .left-side button:hover {
+            background-color: #ff9f69;
+        }
+
+        .right-side {
+            width: 60%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: width 0.6s ease-in-out;
+            position: relative;
+        }
+
+        .right-side.hidden {
+            width: 40%;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            opacity: 0;
+            transition: opacity 0.6s ease-in-out;
+        }
+
+        .form-container.visible {
+            opacity: 1;
+            animation: slideIn 0.6s ease-in-out;
+        }
+
+        .form-container h1 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+            text-align: center;
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 1rem;
+        }
+
+        .form-group {
+            width: 48%;
+        }
+
+        label {
+            display: block;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            color: #666;
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1.2rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            color: #333;
+            background-color: #f9f9f9;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="date"]:focus,
+        select:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilo de notificaciones y mensajes emergentes */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: -400px; /* Inicialmente fuera de la pantalla */
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            opacity: 0;
+            transform: translateX(100%);
+        }
+
+        .notification.visible {
+            opacity: 1;
+            animation: slideInFromRight 0.5s ease-in-out forwards;
+        }
+
+        .notification.stay {
+            transform: translateX(0);
+        }
+
+        .notification.leave {
+            animation: slideOutToRight 0.5s ease-in-out forwards;
+        }
+
+        .notification.success {
+            background-color: #28a745;
+        }
+
+        .notification.error {
+            background-color: #dc3545;
+        }
+
+        .notification-panel {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #dd2476;
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            z-index: 101;
+            cursor: pointer;
+            display: none; /* Se mostrará automáticamente al inicio */
+        }
+
+        .notification-panel.visible {
+            display: block;
+            animation: slideInFromRight 0.5s ease-in-out forwards;
+        }
+
+        .notification-panel .count {
+            background-color: #ff512f;
+            padding: 0.3rem 0.6rem;
+            border-radius: 50%;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+        .error-log {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            width: 300px;
+            max-height: 400px;
+            overflow-y: auto;
+            background-color: #f8f9fa;
+            color: #333;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            z-index: 102;
+            display: none;
+        }
+
+        .error-log.visible {
+            display: block;
+            animation: slideInRight 0.5s ease forwards;
+        }
+
+        .error-log.hidden {
+            animation: slideOutToRight 0.5s ease forwards;
+        }
+
+        .error-log ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .error-log ul li {
+            background-color: #ffdddd;
+            padding: 0.5rem;
+            border-radius: 5px;
+            margin-bottom: 0.5rem;
+            color: #d9534f;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .form-notification {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #dc3545;
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            opacity: 0;
+            z-index: 200;
+            transform: translateY(-100%);
+        }
+
+        .form-notification.success {
+            background-color: #28a745;
+        }
+
+        .form-notification.visible {
+            opacity: 1;
+            animation: slideInFromTop 0.5s ease forwards;
+        }
+
+        .form-notification.leave {
+            animation: slideOutToTop 0.5s ease forwards;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .left-side {
+                width: 100%;
+                height: 40%;
+            }
+
+            .right-side {
+                width: 100%;
+                height: 60%;
+            }
+
+            .form-row {
+                flex-direction: column;
+            }
+
+            .form-group {
+                width: 100%;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideOutToRight {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+        }
+
+        @keyframes slideInFromRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromTop {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideOutToTop {
+            from {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="left-side" id="left-side">
+            <h2>Bienvenido</h2>
+            <p>Registra tus datos para acceder a todos los beneficios.</p>
+            <button onclick="toggleAnimation()">Iniciar</button>
+        </div>
+        <div class="right-side hidden" id="right-side">
+            <div class="form-container" id="form-container">
+                <h1>Registrar Persona</h1>
+                <form id="personForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nombre:</label>
+                            <input type="text" id="name" name="name" required>
+
+                            <label for="paternal_surname">Apellido Paterno:</label>
+                            <input type="text" id="paternal_surname" name="paternal_surname" required>
+
+                            <label for="maternal_surname">Apellido Materno:</label>
+                            <input type="text" id="maternal_surname" name="maternal_surname" required>
+
+                            <label for="id_number">Número de Carnet:</label>
+                            <input type="text" id="id_number" name="id_number" required>
+
+                            <label for="birth_date">Fecha de Nacimiento:</label>
+                            <input type="date" id="birth_date" name="birth_date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="gender">Sexo:</label>
+                            <select id="gender" name="gender" required>
+                                <option value="M">Masculino</option>
+                                <option value="F">Femenino</option>
+                            </select>
+
+                            <label for="birth_place">Lugar de Nacimiento:</label>
+                            <input type="text" id="birth_place" name="birth_place" required>
+
+                            <label for="marital_status">Estado Civil:</label>
+                            <select id="marital_status" name="marital_status" required>
+                                <option value="S">Soltero</option>
+                                <option value="C">Casado</option>
+                                <option value="D">Divorciado</option>
+                                <option value="V">Viudo</option>
+                            </select>
+
+                            <label for="profession">Profesión:</label>
+                            <input type="text" id="profession" name="profession" required>
+
+                            <label for="address">Domicilio:</label>
+                            <input type="text" id="address" name="address" required>
+                        </div>
+                    </div>
+
+                    <button type="submit">Registrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification panel and log -->
+    <div class="notification-panel visible" id="notificationPanel">
+        Notificaciones<span class="count" id="notificationCount">0</span>
+    </div>
+    <div class="error-log" id="errorLog">
+        <ul id="errorList">
+        </ul>
+    </div>
+
+    <!-- Template for notification -->
+    <div class="notification" id="notificationTemplate"></div>
+
+    <!-- Form notification -->
+    <div class="form-notification" id="formNotification"></div>
+
+    <script>
+        let errorCount = 0;
+
+        function toggleAnimation() {
+            const leftSide = document.getElementById('left-side');
+            const rightSide = document.getElementById('right-side');
+            const formContainer = document.getElementById('form-container');
+            const container = document.getElementById('container');
+
+            leftSide.classList.toggle('expanded');
+            rightSide.classList.toggle('hidden');
+            formContainer.classList.toggle('visible');
+            container.classList.toggle('moved');
+        }
+
+        document.getElementById('personForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+
+            fetch('http://localhost:5000/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        showNotification(data.message, 'error');
+                        showFormNotification(data.message, 'error');
+                        logError(data.message);
+                    } else {
+                        showNotification('Persona Registrada', 'success');
+                        showFormNotification('Persona Registrada', 'success');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    showNotification('Error en el servidor. Intente más tarde.', 'error');
+                    showFormNotification('Error en el servidor. Intente más tarde.', 'error');
+                    logError('Error en el servidor. Intente más tarde.');
+                });
+        });
+
+        function showNotification(message, type) {
+            const notification = document.getElementById('notificationTemplate').cloneNode(true);
+            notification.classList.add('visible', type);
+            notification.textContent = message;
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.classList.add('stay');
+            }, 500); // Dejar el mensaje quieto por un momento
+
+            setTimeout(() => {
+                notification.classList.remove('stay');
+                notification.classList.add('leave');
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 500); // Tiempo extra para completar la animación de salida
+            }, 5000);
+        }
+
+        function showFormNotification(message, type) {
+            const formNotification = document.getElementById('formNotification');
+            formNotification.className = 'form-notification visible ' + type;
+            formNotification.textContent = message;
+
+            setTimeout(() => {
+                formNotification.classList.add('leave');
+                setTimeout(() => {
+                    formNotification.classList.remove('visible', 'leave', type);
+                }, 500); // Completar la animación de salida
+            }, 5000);
+        }
+
+        function logError(message) {
+            const errorList = document.getElementById('errorList');
+            const errorItem = document.createElement('li');
+            errorItem.textContent = message;
+            errorList.appendChild(errorItem);
+
+            errorCount++;
+            updateNotificationCount();
+        }
+
+        function updateNotificationCount() {
+            const notificationCount = document.getElementById('notificationCount');
+            notificationCount.textContent = errorCount;
+        }
+
+        document.getElementById('notificationPanel').addEventListener('click', function () {
+            const errorLog = document.getElementById('errorLog');
+            if (errorLog.classList.contains('visible')) {
+                errorLog.classList.remove('visible');
+                errorLog.classList.add('hidden');
+            } else {
+                errorLog.classList.remove('hidden');
+                errorLog.classList.add('visible');
+            }
+        });
+    </script>
+</body>
+
+</html>

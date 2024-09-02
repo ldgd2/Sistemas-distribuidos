@@ -1,0 +1,248 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.100.141:8000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 506-417-624
+INFO:werkzeug: * Detected change in 'c:\\xampp\\htdocs\\Metodo Rest\\client.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 506-417-624
+INFO:werkzeug: * Detected change in 'c:\\xampp\\htdocs\\Metodo Rest\\server.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 506-417-624
+INFO:werkzeug: * Detected change in 'c:\\xampp\\htdocs\\Metodo Rest\\db.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 506-417-624
+INFO:werkzeug: * Detected change in 'c:\\xampp\\htdocs\\Metodo Rest\\server.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 506-417-624
+INFO:werkzeug: * Detected change in 'c:\\xampp\\htdocs\\Metodo Rest\\client.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 506-417-624
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.141:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 506-417-624
+ERROR:root:Error al conectar con la base de datos: (2013, "Lost connection to server at 'handshake: reading initial communication packet', system error: 0")
+INFO:werkzeug:192.168.100.198 - - [01/Sep/2024 16:54:29] "[35m[1mPOST /register HTTP/1.1[0m" 201 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.100.141:8000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 506-417-624
+INFO:werkzeug: * Detected change in 'c:\\xampp\\htdocs\\Rest\\server.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 506-417-624
+INFO:werkzeug: * Detected change in 'c:\\xampp\\htdocs\\Rest\\db.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 506-417-624
+INFO:werkzeug: * Detected change in 'c:\\xampp\\htdocs\\Rest\\client.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 506-417-624
+INFO:werkzeug: * Detected change in 'c:\\xampp\\htdocs\\Rest\\server.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 506-417-624
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.141:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 506-417-624
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.141:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 506-417-624
+ERROR:root:Error al conectar con la base de datos: 1130 (HY000): Host 'MSI' is not allowed to connect to this MariaDB server
+ERROR:root:Error en el registro: 1130 (HY000): Host 'MSI' is not allowed to connect to this MariaDB server
+INFO:werkzeug:192.168.100.198 - - [02/Sep/2024 09:21:14] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\xampp\\htdocs\\Rest\\db.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 506-417-624
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.141:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 506-417-624
+ERROR:root:Error al conectar con la base de datos: (1130, "Host 'MSI' is not allowed to connect to this MariaDB server")
+ERROR:root:Error en el registro: (1130, "Host 'MSI' is not allowed to connect to this MariaDB server")
+INFO:werkzeug:192.168.100.198 - - [02/Sep/2024 09:33:36] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\xampp\\htdocs\\Rest\\db.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 506-417-624
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.141:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 506-417-624
+INFO:werkzeug:192.168.100.198 - - [02/Sep/2024 09:39:12] "[35m[1mPOST /register HTTP/1.1[0m" 201 -
+INFO:werkzeug:192.168.100.198 - - [02/Sep/2024 09:43:15] "POST /register HTTP/1.1" 200 -
+INFO:werkzeug:192.168.100.198 - - [02/Sep/2024 09:43:38] "[35m[1mPOST /register HTTP/1.1[0m" 201 -
+INFO:werkzeug:192.168.100.198 - - [02/Sep/2024 09:43:54] "[35m[1mPOST /register HTTP/1.1[0m" 201 -
+INFO:werkzeug:192.168.100.198 - - [02/Sep/2024 09:44:01] "POST /register HTTP/1.1" 200 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 09:51:59] "OPTIONS /register HTTP/1.1" 200 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 09:52:11] "OPTIONS /register HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.141:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 506-417-624
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 09:52:49] "OPTIONS /register HTTP/1.1" 200 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 09:52:50] "OPTIONS /register HTTP/1.1" 200 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 09:52:51] "OPTIONS /register HTTP/1.1" 200 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 09:53:39] "OPTIONS /register HTTP/1.1" 200 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 09:54:14] "OPTIONS /register HTTP/1.1" 200 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 09:58:31] "OPTIONS /register HTTP/1.1" 200 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 09:58:33] "OPTIONS /register HTTP/1.1" 200 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 09:58:33] "OPTIONS /register HTTP/1.1" 200 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 09:58:33] "OPTIONS /register HTTP/1.1" 200 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 09:58:34] "OPTIONS /register HTTP/1.1" 200 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 09:58:34] "OPTIONS /register HTTP/1.1" 200 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 09:58:34] "OPTIONS /register HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\xampp\\htdocs\\Rest\\server.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 506-417-624
+INFO:werkzeug: * Detected change in 'c:\\xampp\\htdocs\\Rest\\db.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 506-417-624
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.141:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 506-417-624
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 10:07:10] "OPTIONS /register HTTP/1.1" 200 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 10:07:14] "OPTIONS /register HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\xampp\\htdocs\\Rest\\server.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 506-417-624
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.141:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 506-417-624
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 10:07:52] "OPTIONS /register HTTP/1.1" 200 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 10:08:07] "OPTIONS /register HTTP/1.1" 200 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 10:09:08] "OPTIONS /register HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\xampp\\htdocs\\Rest\\server.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 506-417-624
+INFO:werkzeug: * Detected change in 'C:\\xampp\\htdocs\\Rest\\server.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.141:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 506-417-624
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 10:12:01] "OPTIONS /register HTTP/1.1" 200 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 10:12:16] "OPTIONS /register HTTP/1.1" 200 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 10:12:44] "[31m[1mGET /register HTTP/1.1[0m" 405 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 10:12:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'C:\\xampp\\htdocs\\Rest\\server.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 506-417-624
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.141:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 506-417-624
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 10:15:33] "OPTIONS /register HTTP/1.1" 200 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 10:15:33] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 10:15:47] "OPTIONS /register HTTP/1.1" 200 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 10:15:47] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 10:16:09] "OPTIONS /register HTTP/1.1" 200 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 10:16:09] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 10:18:29] "OPTIONS /register HTTP/1.1" 200 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 10:18:29] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 10:18:57] "OPTIONS /register HTTP/1.1" 200 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 10:18:57] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 10:19:02] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 10:19:03] "OPTIONS /register HTTP/1.1" 200 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 10:19:03] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+INFO:werkzeug:192.168.100.141 - - [02/Sep/2024 10:19:03] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Detected change in 'C:\\xampp\\htdocs\\Rest\\server.py', reloading
+INFO:werkzeug: * Restarting with stat
+2024-09-02 10:24:06,042 WARNING:  * Debugger is active!
+2024-09-02 10:24:06,051 INFO:  * Debugger PIN: 506-417-624
+2024-09-02 10:24:25,110 INFO:  * Detected change in 'C:\\xampp\\htdocs\\Rest\\db.py', reloading
+INFO:werkzeug: * Restarting with stat
+2024-09-02 10:24:25,494 WARNING:  * Debugger is active!
+2024-09-02 10:24:25,500 INFO:  * Debugger PIN: 506-417-624
+2024-09-02 10:26:01,440 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.141:5000
+2024-09-02 10:26:01,440 INFO: [33mPress CTRL+C to quit[0m
+2024-09-02 10:26:01,442 INFO:  * Restarting with stat
+2024-09-02 10:26:01,684 WARNING:  * Debugger is active!
+2024-09-02 10:26:01,689 INFO:  * Debugger PIN: 506-417-624
+2024-09-02 10:32:24,980 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.141:5000
+2024-09-02 10:32:24,980 INFO: [33mPress CTRL+C to quit[0m
+2024-09-02 10:32:24,983 INFO:  * Restarting with stat
+2024-09-02 10:32:25,228 WARNING:  * Debugger is active!
+2024-09-02 10:32:25,233 INFO:  * Debugger PIN: 506-417-624
+2024-09-02 10:33:26,204 ERROR: Error al conectar con la base de datos: (1045, "Access denied for user 'root'@'MSI' (using password: YES)")
+2024-09-02 10:33:26,204 ERROR: Error en el registro: (1045, "Access denied for user 'root'@'MSI' (using password: YES)")
+2024-09-02 10:33:26,204 INFO: 192.168.100.198 - - [02/Sep/2024 10:33:26] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+2024-09-02 10:33:56,567 ERROR: Error al conectar con la base de datos: (1045, "Access denied for user 'root'@'MSI' (using password: YES)")
+2024-09-02 10:33:56,567 ERROR: Error en el registro: (1045, "Access denied for user 'root'@'MSI' (using password: YES)")
+2024-09-02 10:33:56,567 INFO: 192.168.100.198 - - [02/Sep/2024 10:33:56] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+2024-09-02 10:39:03,282 INFO: 192.168.100.198 - - [02/Sep/2024 10:39:03] "[35m[1mPOST /register HTTP/1.1[0m" 201 -
+2024-09-02 10:39:21,476 INFO: 192.168.100.198 - - [02/Sep/2024 10:39:21] "POST /register HTTP/1.1" 200 -
+2024-09-02 10:39:51,017 INFO:  * Detected change in 'C:\\xampp\\htdocs\\Rest\\client.py', reloading
+2024-09-02 10:39:51,038 INFO:  * Restarting with stat
+2024-09-02 10:39:51,306 WARNING:  * Debugger is active!
+2024-09-02 10:39:51,311 INFO:  * Debugger PIN: 506-417-624
